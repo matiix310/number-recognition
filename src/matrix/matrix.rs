@@ -1,3 +1,5 @@
+use core::panic;
+
 use rand::{thread_rng, Rng};
 
 #[derive(Clone)]
@@ -87,25 +89,6 @@ impl Matrix {
         res
     }
 
-    pub fn dot_multiply(&mut self, other: &Matrix) -> Matrix {
-        // check if the dot multiplication is possible between the two matrix
-        if self.rows != other.rows || self.cols != other.cols {
-            panic!("Attempted to dot multiply by matrix of incorrect dimensions");
-        }
-
-        // dot multiply the two matrix
-        let mut res = Matrix::zeros(self.rows, self.cols);
-
-        for i in 0..self.rows {
-            for j in 0..self.cols {
-                res.data[i][j] = self.data[i][j] * other.data[i][j];
-            }
-        }
-
-        // return the result matrix
-        res
-    }
-
     pub fn substract(&mut self, other: &Matrix) -> Matrix {
         // check if the substraction is possible between the two matrix
         if self.rows != other.rows || self.cols != other.cols {
@@ -149,5 +132,14 @@ impl Matrix {
 
         // return the result matrix
         res
+    }
+
+    pub fn print_size(&self, name: &str) -> () {
+        println!(
+            "{} matrix size: {}x{}",
+            name,
+            self.data.len(),
+            self.data[0].len()
+        );
     }
 }

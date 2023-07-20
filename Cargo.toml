@@ -9,3 +9,4 @@ authors = ["Matiix310"]
 [dependencies]
 rand = "0.8.5"
 image = "0.24.6"
+progress_bar="1.0.5"

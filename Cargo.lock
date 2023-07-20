@@ -13,6 +13,7 @@ name = "ai-number-recognition"
 version = "0.1.0"
 dependencies = [
  "image",
+ "progress_bar",
  "rand",
 ]
 
@@ -264,6 +265,12 @@ dependencies = [
 ]
 
 [[package]]
+name = "lazy_static"
+version = "1.4.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "e2abad23fbc42b3700f2f279844dc832adb2b2eb069b2df918f455c4e18cc646"
+
+[[package]]
 name = "lebe"
 version = "0.5.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -411,6 +418,15 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "92de25114670a878b1261c79c9f8f729fb97e95bac93f6312f583c60dd6a1dfe"
 dependencies = [
  "unicode-ident",
+]
+
+[[package]]
+name = "progress_bar"
+version = "1.0.5"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "94320ad982441d1294a56ba407d963c09fad89c70def47288603350b88cd6b94"
+dependencies = [
+ "lazy_static",
 ]
 
 [[package]]
